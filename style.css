@@ -1,3 +1,5 @@
+/* !de adaugat 4 iconuri la coloana a doua din josul paginii daca am timp */
+
 * {
   padding: 0;
   margin: 0;
@@ -20,8 +22,8 @@ body {
     "header2-left header2-left header2-right header2-right" 5em
     "header3 header3 header3 header3" 3.5em
     "header4 header4 header4 header4" 3.5em
-    "hero-img hero-img hero-img hero" 25vh
-    "img1 img2 img3 img4" 17vh
+    "hero-img hero-img hero-img hero" 20em
+    "img1 img2 img3 img4" 16em
     "col1 col2 col3 col4" auto
     / 1fr 1fr 1fr 1fr;
 }
@@ -57,48 +59,38 @@ body {
 
 .hero-img {
   grid-area: hero-img;
-  background-color: rgb(138, 194, 146);
 }
 .hero {
   grid-area: hero;
-  background-color: rgb(75, 174, 187);
 }
 
 .img1 {
   grid-area: img1;
-  background-color: rgb(187, 75, 153);
 }
 .img2 {
   grid-area: img2;
-  background-color: rgb(124, 190, 103);
 }
 .img3 {
   grid-area: img3;
-  background-color: rgb(100, 150, 67);
 }
 .img4 {
   grid-area: img4;
-  background-color: rgb(47, 85, 90);
 }
 
 .col1 {
   grid-area: col1;
-  background-color: rgb(75, 46, 55);
 }
 
 .col2 {
   grid-area: col2;
-  background-color: rgb(68, 157, 168);
 }
 
 .col3 {
   grid-area: col3;
-  background-color: rgb(49, 155, 27);
 }
 
 .col4 {
   grid-area: col4;
-  background-color: rgb(70, 131, 139);
 }
 
 /*?STILIZARE header1 */
@@ -282,4 +274,334 @@ body {
   font-size: 1em;
   border-right: none;
   padding: 0 1.5em;
+}
+
+/*?STILIZARE hero-img si hero */
+
+.hero-img {
+  width: 100%;
+}
+
+.img-monkey {
+  object-fit: contain;
+  width: 100%;
+}
+
+/*? STILIZARE HERO  */
+
+.hero {
+  background-color: black;
+  display: grid;
+  grid-template:
+    " . numere . " 2em
+    " . imax . " 5em
+    "born born born" auto
+    ". information ." 4em
+    / 1fr 8fr 1fr;
+}
+
+.numere {
+  grid-area: numere;
+  justify-content: center;
+}
+
+.numere > span {
+  margin-right: 0.6em;
+  color: lightgray;
+}
+
+.numere > span:nth-child(2) {
+  text-decoration-line: underline;
+  color: #fff;
+}
+
+.imax {
+  grid-area: imax;
+}
+
+.born {
+  grid-area: born;
+  position: relative;
+  margin-top: 1em;
+}
+
+.information {
+  grid-area: information;
+  justify-content: center;
+}
+
+.born > .odd1 > img {
+  position: absolute;
+  left: 1.5em;
+  z-index: 1;
+}
+
+.born > .even1 > img {
+  position: absolute;
+  left: 8em;
+  top: 2.4em;
+  z-index: 2;
+}
+
+.born > .odd2 > img {
+  position: absolute;
+  left: 7em;
+  top: 3.1em;
+  z-index: 3;
+}
+
+.born > .even2 > img {
+  position: absolute;
+  left: 14em;
+  top: 5em;
+  z-index: 4;
+}
+
+.imax {
+  justify-content: center;
+  color: lightgray;
+  line-height: 0.9;
+  transform: scaleY(0.9);
+  padding-bottom: 0.5em;
+}
+
+#smithsonian {
+  font-size: 1.6em;
+}
+
+#imax-span {
+  font-weight: 900;
+  font-size: 2.7em;
+  transform: scaleY(0.7);
+}
+#theaters {
+  font-size: 1.1em;
+}
+
+.information > p {
+  color: lightgray;
+  font-size: 0.8em;
+}
+
+/*?STILIZARE img1-img4 */
+
+.img1 {
+  width: 100%;
+  background-color: aliceblue;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+}
+
+.img1 > figure > img {
+  object-fit: contain;
+  width: 100%;
+  padding: 0.8em 0.8em 0.8em 1.2em;
+  border-right: 1px solid gray;
+}
+
+.img1 > figcaption {
+  color: rgb(28, 28, 128);
+  font-size: 1.3em;
+  margin-top: -0.5em;
+}
+
+.img2 {
+  width: 100%;
+  background-color: aliceblue;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+}
+
+.img2 > figure > img {
+  object-fit: contain;
+  width: 100%;
+  height: 106%;
+  padding: 0.8em;
+  border-right: 1px solid gray;
+}
+
+.img2 > figcaption {
+  color: rgb(28, 28, 128);
+  font-size: 1.3em;
+  margin-top: -0.1em;
+}
+
+.img3 {
+  width: 100%;
+  background-color: aliceblue;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+}
+
+.img3 > figure > img {
+  object-fit: contain;
+  width: 93%;
+  padding: 0.8em;
+  border-right: 1px solid gray;
+}
+
+.img3 > figcaption {
+  color: rgb(28, 28, 128);
+  font-size: 1.3em;
+  margin-top: -0.5em;
+}
+
+.img4 {
+  width: 100%;
+  background-color: aliceblue;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+}
+
+.img4 > figure > img {
+  object-fit: contain;
+  width: 100%;
+  padding: 0.8em 1.2em 0.8em 0;
+}
+
+.img4 > figcaption {
+  color: rgb(28, 28, 128);
+  font-size: 1.3em;
+  margin-top: -0.5em;
+}
+
+/*?STILIZARE  col1-col4*/
+
+.col1 {
+  padding: 1em;
+  line-height: 1.2;
+  background-color: aliceblue;
+}
+
+.col1 > h2 {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.col1 > p {
+  margin-bottom: 0.5em;
+}
+
+.col1 > ul {
+  font-size: 1em;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+.col1 > ul > li {
+  color: rgb(28, 28, 128);
+  font-weight: 600;
+}
+
+.v-kids {
+  margin-top: 0.6em;
+}
+
+.col2 {
+  background-color: aliceblue;
+  border-left: 1px solid gray;
+  padding: 1em;
+  line-height: 1.2;
+}
+
+.col2 > p:last-child {
+  color: #242480;
+  padding: 0.5em;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+#span-special {
+  display: inline-block;
+  width: 240px;
+  padding-bottom: 1em;
+  border-bottom: 1px solid gray;
+}
+
+.col2 > h2 {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.col2 > p {
+  color: rgb(28, 28, 128);
+  font-weight: 700;
+  font-size: 1em;
+  margin-top: 0.5rem;
+}
+
+.col2 > span {
+  font-size: 0.9em;
+}
+
+.col3 {
+  background-color: aliceblue;
+  font-size: 0.9em;
+  padding: 0.5em;
+  border-left: 1px solid gray;
+}
+
+.col3 > p:last-child {
+  color: #242480;
+  padding: 0.5em;
+}
+
+.small-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  border-bottom: 1px solid gray;
+  padding-bottom: 1em;
+}
+
+.img-6-wrapper {
+  width: 140%;
+}
+
+.img-6 {
+  object-fit: contain;
+  width: 100%;
+  border: 1px solid black;
+  align-self: flex-start;
+}
+
+.col4 {
+  padding: 0.7em;
+  background-color: aliceblue;
+  border-left: 1px solid gray;
+}
+
+.text-col4 {
+  margin-left: 0.5em;
+}
+
+.text-col4 > p:first-child {
+  color: #242480;
+  font-weight: 700;
+}
+
+#border-none {
+  border-bottom: none;
+}
+
+#the-last-img {
+  width: 73%;
+}
+
+.col-4-p {
+  color: #242480;
+}
+
+.col4 > span {
+  font-size: 0.9em;
+  padding-top: 0.5em;
+}
+
+.images2-wrapper {
+  padding-bottom: 1em;
+  border-bottom: 1px solid gray;
+}
+
+.col4 > h2 {
+  font-size: 1.3em;
 }
