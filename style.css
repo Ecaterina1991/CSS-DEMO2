@@ -252,7 +252,9 @@ footer {
 
 .header4 > a {
   text-decoration: none;
-  color: #d1c6c6;
+  /* color: black; */
+  color: #fff;
+  background-color: #242480;
   font-size: 1em;
   border-right: 0.5px solid #928b8b;
   padding: 1em 2.2em;
@@ -264,7 +266,7 @@ footer {
   text-decoration: none;
   font-size: 1em;
   border-right: none;
-  padding: 0 1.5em;
+  /* padding:  1.5em; */
 }
 
 /*?STILIZARE hero-img si hero */
@@ -344,7 +346,7 @@ footer {
 
 .born > .even2 > img {
   position: absolute;
-  left: 14em;
+  left: 12em;
   top: 5em;
   z-index: 4;
 }
@@ -620,10 +622,6 @@ footer {
     font-size: 1.3em;
   }
 
-  body {
-    background-color: #242480;
-  }
-
   #d-3d {
     left: 12em;
     top: 5.5em;
@@ -644,7 +642,7 @@ footer {
     /* margin-top: calc (100% - 1200px) / 10; */
     width: 70%;
     border: 1px solid gray;
-    color: rgb(77, 71, 71);
+    color: black;
   }
 
   .google-wrapper {
@@ -658,7 +656,6 @@ footer {
     background-color: rgb(235, 225, 225);
     color: black;
     border: 1px solid gray;
-    color: rgb(77, 71, 71);
   }
 
   .header4 > a:last-child {
@@ -692,7 +689,6 @@ footer {
       ". footer footer ." 2em
       /1fr 2fr 2fr 1fr;
     row-gap: 0.5em;
-    /* background-color: red; */
   }
 }
 
@@ -770,7 +766,6 @@ footer {
       "footer footer footer" 2em
       /1fr 2fr 1fr;
     row-gap: 0.5em;
-    background-color: red;
   }
 }
 
